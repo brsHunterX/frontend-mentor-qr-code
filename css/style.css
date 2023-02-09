@@ -53,6 +53,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding: var(--space-xl);
 }
 
 footer {
@@ -97,6 +98,8 @@ img {
 }
 
 .card {
+  width: 100%;
+  max-width: 340px;
   padding: var(--space-base);
   background: var(--white);
   border-radius: var(--rounded-base);
@@ -107,36 +110,4 @@ img {
   width: 100%;
   text-align: center;
   padding: var(--space-base);
-}
-
-@media (min-width: 320px) {
-  main {
-    padding: var(--space-xl);
-  }
-
-  .card {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  main {
-    padding: 0;
-  }
-
-  .card {
-    max-width: 48%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card {
-    max-width: 36%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .card {
-    max-width: 18%;
-  }
 }
