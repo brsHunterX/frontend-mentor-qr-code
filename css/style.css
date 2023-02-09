@@ -1,0 +1,142 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(212, 46%, 89%);
+  --greyish-blue: rgb(123, 135, 157);
+  --dark-blue: hsl(217, 45%, 22%);
+
+  /* TEXTS */
+  --text-family: "Outfit", sans-serif;
+  --text-size-link: 0.8rem;
+  --text-line-height-link: 1.25rem;
+  --text-size-body: 1rem;
+  --text-line-height-body: 1.5rem;
+  --text-size-title: 1.5rem;
+  --text-line-height-title: 1.75rem;
+  --text-weight-regular: 400;
+  --text-weight-bold: 700;
+
+  /* SPACES */
+  --space-base: 1rem;
+  --space-xl: 2rem;
+
+  /* SHAPES */
+  --rounded-sm: 0.5rem;
+  --rounded-base: 1rem;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: var(--space-xl);
+  grid-template-rows: 1fr auto;
+  background: var(--light-grey);
+  font-family: var(--text-family);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-size: var(--text-size-title);
+  font-weight: var(--text-weight-bold);
+  line-height: var(--text-line-height-title);
+}
+
+p {
+  color: var(--greyish-blue);
+  font-size: var(--text-size-body);
+  font-weight: var(--text-weight-regular);
+  line-height: var(--text-line-height-body);
+}
+
+a,
+span {
+  color: var(--greyish-blue);
+  font-size: var(--text-size-link);
+  font-weight: var(--text-weight-regular);
+  line-height: var(--text-line-height-link);
+}
+
+a {
+  color: var(--dark-blue);
+}
+
+img {
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--rounded-sm);
+}
+
+.card {
+  padding: var(--space-base);
+  background: var(--white);
+  border-radius: var(--rounded-base);
+  box-shadow: 0px 0px 24px rgba(31, 50, 81, 0.08);
+}
+
+.card .content {
+  width: 100%;
+  text-align: center;
+  padding: var(--space-base);
+}
+
+@media (min-width: 320px) {
+  main {
+    padding: var(--space-xl);
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 0;
+  }
+
+  .card {
+    max-width: 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    max-width: 36%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    max-width: 18%;
+  }
+}
